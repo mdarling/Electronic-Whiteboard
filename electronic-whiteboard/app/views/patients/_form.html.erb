@@ -57,12 +57,12 @@
   </div>
   <div class="field">
     <%= f.label :anesthesia_interview %><br />
-    <%= f.text_area :anesthesia_interview %>
+    <%= f.select :anesthesia_interview, options_for_select([[""], "Epidural", "Intrathecal", "None", "Waiting" ]) %>
   </div>
   <div class="field">
     <%= f.label :group_b_strep %><br />
-    <%= f.text_field :group_b_strep %>
-  </div>
+    <%= f.text_field :group_b_strep %>  
+ </div>
   <div class="field">
     <%= f.label :blood_type %><br />
     <%= f.select :blood_type, @patient.blood_types, {:include_blank => true} %>

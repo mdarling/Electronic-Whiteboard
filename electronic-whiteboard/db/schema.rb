@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120720000853) do
+ActiveRecord::Schema.define(:version => 20120720193707) do
 
   create_table "attendings", :force => true do |t|
     t.string   "first_init"
@@ -49,8 +49,9 @@ ActiveRecord::Schema.define(:version => 20120720000853) do
 
   create_table "rooms", :force => true do |t|
     t.string   "room_number"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.boolean  "room_occupied"
   end
 
   create_table "users", :force => true do |t|
