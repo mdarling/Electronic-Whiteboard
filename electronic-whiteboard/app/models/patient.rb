@@ -3,7 +3,24 @@ class Patient < ActiveRecord::Base
   
   belongs_to :room
 
-  def blood_types
-  	{:"O+" => 1, :"A-" => 2, :"B" => 3}.freeze
+  def anesthesia_interviews
+    ["Epidural", "Intrachecal", "None", "Waiting"].freeze
   end
+
+  def blood_types
+    ["O+", "O-", "A+", "A-", "B+", "B-", "AB+", "AB-"].freeze
+  end
+
+  def group_b_streps
+    ["Negative", "Positive"].freeze
+  end
+
+  def membranes
+    ["Intact", "Bulging", "Ruptured", "Postpart"].freeze
+  end
+
+  def patient_statuses
+    ["Non-Stress Test", "Observation", "Antepartum", "Laboring", "Laboring VBAC", "Sched CSection", "Deliv Vaginal", "Deliv CSection"].freeze
+  end
+
 end
