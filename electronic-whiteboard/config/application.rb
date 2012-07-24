@@ -60,6 +60,6 @@ module ElectronicWhiteboard
     config.assets.version = '1.0'
 
     # Set Time Zone 
-    config.time_zone = current_user.time_zone
+    config.time_zone = current_user.time_zone #'Mountain Time (US & Canada)'
   end
 end
